@@ -1,13 +1,206 @@
+/* === Importação da fonte Inter via Google Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* === Variáveis Globais === */
+:root {
+  --font-family-base: 'Inter', sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+  --text-color-base: #212529;
+
+  --bs-primary: #067B95;
+  --bs-secondary: #6c757d; /* Cinza Bootstrap padrão */
+  --bs-border-radius: 8px;
+
+   /* === PRIMARY === */
+  --bs-primary-rgb: 6, 123, 149;
+
+  --bs-primary-dark: #004555;
+  --bs-primary-rgb-dark: 0, 69, 85;
+
+  --bs-primary-light: #EBE5FC;
+  --bs-primary-rgb-light: 234, 229, 252;
+
+  /* === SECONDARY === */
+  --bs-secondary: #6c757d;
+  --bs-secondary-rgb: 108, 117, 125;
+
+  --bs-secondary-dark: #54595E;
+  --bs-secondary-rgb-dark: 84, 89, 94;
+
+  --bs-secondary-light: #6c757d;
+  --bs-secondary-rgb-light: 171, 181, 190;
+
+  /* === Alerts, Toasts etc === */
+  --bs-success: #28A745;
+  --bs-success-rgb: 40, 167, 69;
+
+  --bs-danger: #DC3545;
+  --bs-danger-rgb: 220, 53, 69;
+
+  --bs-warning: #FFC107;
+  --bs-warning-rgb: 255, 193, 7;
+
+  --bs-info: #17A2B8;
+  --bs-info-rgb: 23, 162, 184;
+
+  /* === Optional: Backgrounds / Text === */
+  --bs-body-bg: #f8f9fa;
+  --bs-body-color: #212529;
+}
+
+/* === Reset básico e fonte global === */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--text-color-base);
+  background-color: #fff;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* === Código e Monoespaçadas === */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* === Estilização da Dropdown customizada === */
+.custom-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: var(--bs-border-radius);
+  background-color: white;
+  font-family: var(--font-family-base);
+  font-size: 16px;
+  font-weight: 400;
+  color: #495057;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Remove seta padrão */
+.custom-dropdown-toggle::after {
+  display: none !important;
+}
+
+/* === Estilo da dropdown menu === */
+.dropdown-menu {
+  border-radius: var(--bs-border-radius);
+  padding: 10px;
+  min-width: 120px;
+  background-color: white;
+}
+
+/* === Itens da dropdown === */
+.dropdown-item {
+  font-family: var(--font-family-base);
+  font-size: 16px;
+  font-weight: 400;
+  color: #495057;
+  padding: 10px;
+  text-align: center;
+}
+
+/* === Badge personalizada === */
+.badge-success {
+  font-family: var(--font-family-base);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: #198754;
+  color: white;
+}
+
+/* === Toasts customizados === */
+.custom-toast {
+  font-family: var(--font-family-base);
+  font-size: 14px;
+  font-weight: 400;
+  padding: 12px 16px;
+  background-color: #198754 !important; /* Verde */
+  color: white;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.custom-toast button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* === input customizados === */
+.custom-input {
+  border: 1px solid #067B95;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  color: #212529;
+  outline: #067B95 !important;
+  box-shadow: none;
+}
+
+.custom-input:focus {
+  border-color:#067B95;
+  box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+.custom-pagination .page-item.active .page-link {
+  background-color:#067B95 !important; /* Cor vermelha */
+  border-color:#067B95 !important;
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.custom-pagination .page-link {
+  border-radius: 8px;
+  font-size: 14px;
+  color: #212529;
+  padding: 12px;
+}
+
+.custom-pagination-button {
+  padding: 10px;
+  border: 1px solid #ced4da !important;
+  color: #495057 !important;
+  background-color: white !important;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+/* Hover effect */
+.custom-pagination-button:hover:not(:disabled) {
+  background-color: #067B95 !important; /* red */
+  color: white !important;
+  border-color: #067B95;
+}
+
+/* Active (quando pressionado): fundo vermelho mais escuro */
+.custom-pagination-button:active:not(:disabled) {
+  background-color: #067B95 !important;
+  color: white;
+  border-color: #067B95 !important;
+}
+
+/* Disabled */
+.custom-pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
