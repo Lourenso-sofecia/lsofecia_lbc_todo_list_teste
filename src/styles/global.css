@@ -244,3 +244,9 @@ code {
     background-color: #e9ecef;
   }
 }
+
+tr.no-hover:hover,
+tr.no-hover td:hover {
+  background-color: inherit !important;
+  cursor: default !important;
+}

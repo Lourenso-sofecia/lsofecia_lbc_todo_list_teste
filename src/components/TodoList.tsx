@@ -38,8 +38,8 @@ const TodoList: React.FC<Props> = ({ todos, onToggle, onDelete }) => (
     </thead>
     <tbody>
       {todos.length === 0 ? (
-        <tr>
-          <td colSpan={7} className=" border-0 text-center">
+        <tr className="no-hover">
+          <td colSpan={9} className=" border-0 text-center ">
             <EmptyList />
           </td>
         </tr>
