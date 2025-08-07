@@ -60,8 +60,9 @@ const TodoItem: React.FC<Props> = ({ todo, onToggle, onDelete }) => {
           style={{
             paddingTop: "12px",
             paddingBottom: "12px",
-            color: "#dc3545",
-            backgroundColor: "#f8d7da",
+            color: "#963c45",
+            backgroundColor: "#fce7e9",
+            fontWeight: "semi-bold"
           }}
         >
           Excluir

@@ -106,7 +106,9 @@ const TodoApp: React.FC = () => {
         >
           <div className="mt-3 d-flex flex-row align-items-center justify-content-center gap-2">
             <div>
-              Página {page} de {totalPages === 0 ? 1 : totalPages}
+              <p>
+                Página {page} de {totalPages === 0 ? 1 : totalPages}
+              </p>
             </div>
             <PaginationControl
               page={page}
@@ -134,7 +136,12 @@ const TodoApp: React.FC = () => {
 
       <section className="d-flex justify-content-between align-items-center mb-3 w-100">
         <span style={{ flexShrink: 0 }}>Total de tarefas: {todos.length}</span>
-        <div className="d-flex gap-2 justify-content-end w-100">
+        <div className="d-flex align-items-center gap-2 justify-content-end w-100">
+          <div className="mt-3">
+            <p>
+              Página {page} de {totalPages === 0 ? 1 : totalPages}
+            </p>
+          </div>
           <PaginationControl
             page={page}
             totalPages={totalPages}

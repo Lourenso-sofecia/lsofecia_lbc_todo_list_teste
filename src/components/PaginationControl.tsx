@@ -75,7 +75,7 @@ const PaginationControl: React.FC<Props> = ({ page, totalPages, setPage }) => {
         title="Clique para ir à próxima página"
         style={{ paddingTop: "10px", paddingBottom: "10px" }}
       >
-        Próximo
+        Seguinte
       </Button>
     </div>
   );
