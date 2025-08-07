@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+# 📝 Todo List App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Um aplicativo de lista de tarefas desenvolvido com foco em **componentização**, **performance**, **acessibilidade (A11y)** e **boas práticas de desenvolvimento em React + TypeScript**. Utiliza `localStorage` para persistência de dados 
 
-## Available Scripts
+🔗 **Acesse a aplicação em produção**:  
+👉 [https://lsofecia-lbc-todo-list-teste.vercel.app](https://lsofecia-lbc-todo-list-teste.vercel.app)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- ✅ Adicionar novas tarefas
+- ✅ Marcar tarefas como concluídas
+- ✅ Excluir tarefas
+- ✅ Tabela pra apresentar as tarefas
+- ✅ Paginação
+- ✅ Paginação com seleção de tamanho por página (8, 16, 24)
+- ✅ Interface responsiva com **Bootstrap 5**
+- ✅ Código componentizado e organizado com foco em **escalabilidade**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## ✨ Funcionalidades adicionais
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ✅ Armazenamento local com `localStorage` para garantir persistência
+- ✅ Paginação com seleção de tamanho por página (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 20, 24, 25, 30, 50, 100)
+- ✅ Acessibilidade: suporte a leitores de tela e navegação via teclado
+---
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🧱 Tecnologias Utilizadas
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [React 18+](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Bootstrap 5](https://getbootstrap.com/)
+- [Vite](https://vitejs.dev/) ou [Create React App](https://create-react-app.dev/) (dependendo da versão inicial usada)
+- `localStorage` para persistência de tarefas e histórico
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🚀 Como executar localmente
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 1. Clone o repositório
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/Lourenso-sofecia/lsofecia_lbc_todo_list_teste.git
+cd lsofecia_lbc_todo_list_teste
+npm run dev
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+E vai estar disponivel em localhost:3000
