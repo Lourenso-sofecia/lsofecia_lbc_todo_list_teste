@@ -96,7 +96,7 @@ const TodoApp: React.FC = () => {
         style={{}}
       >
         <article className="w-100 w-md-auto">
-          <p className="m-0 text-secondary"> Descrição da tarefa:</p>
+          <p className="m-0 text-gray-700"> Descrição da tarefa:</p>
           <TodoForm onAdd={handleAdd} />
         </article>
 
@@ -104,9 +104,9 @@ const TodoApp: React.FC = () => {
           className="d-flex flex-row align-items-center justify-content-between w-md-auto"
           style={{ flexShrink: 0 }}
         >
-          <div className="mt-3 d-flex flex-row align-items-center justify-content-center gap-2">
-            <div>
-              <p>
+          <div className=" d-flex flex-row align-items-center justify-content-center gap-2">
+            <div className="mt-3">
+              <p className="text-gray-700 text-base">
                 Página {page} de {totalPages === 0 ? 1 : totalPages}
               </p>
             </div>
@@ -135,10 +135,10 @@ const TodoApp: React.FC = () => {
       </section>
 
       <section className="d-flex justify-content-between align-items-center mb-3 w-100">
-        <span style={{ flexShrink: 0 }}>Total de tarefas: {todos.length}</span>
+        <span className="text-blockquote-1" style={{ flexShrink: 0 }}>Total de tarefas: {todos.length}</span>
         <div className="d-flex align-items-center gap-2 justify-content-end w-100">
           <div className="mt-3">
-            <p>
+            <p className="text-gray-700 text-base">
               Página {page} de {totalPages === 0 ? 1 : totalPages}
             </p>
           </div>

@@ -21,7 +21,7 @@ export function Footer() {
             height={32}
             width={169}
           />
-          <p className="mb-0">
+          <p className="mb-0 text-gray-700 text-base">
             Exercício desenvolvido por: <span>Lourenço Sofécia</span>
           </p>
         </div>

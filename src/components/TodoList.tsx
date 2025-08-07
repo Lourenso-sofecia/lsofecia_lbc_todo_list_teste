@@ -24,13 +24,13 @@ const TodoList: React.FC<Props> = ({ todos, onToggle, onDelete }) => (
           borderBottom: "2px solid #bebebe",
         }}
       >
-        <th className="border-0 text-nowrap" colSpan={5}>
+        <th className="border-0 text-nowrap text-extra-bold text-gray-700" colSpan={5}>
           Tarefa
         </th>
-        <th className="border-0 text-nowrap">Data de Criação</th>
-        <th className="border-0 text-nowrap">Data de conclusão</th>
+        <th className="border-0 text-nowrap text-extra-bold text-gray-700">Data de Criação</th>
+        <th className="border-0 text-nowrap text-extra-bold text-gray-700">Data de conclusão</th>
         <th
-          className="border-0 text-nowrap"
+          className="border-0 text-nowrap text-extra-bold text-gray-700"
           colSpan={2}
           aria-description="Ações"
         ></th>

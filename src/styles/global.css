@@ -250,3 +250,31 @@ tr.no-hover td:hover {
   background-color: inherit !important;
   cursor: default !important;
 }
+
+.text-gray-700 {
+  color: #495057 !important; 
+}
+
+.text-gray-700 {
+  color: #212529 !important; 
+}
+
+.text-blockquote-1 {
+  font-size: 1.25rem; 
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+}
+
+.text-extra-bold {
+  font-size: 1rem; /* 16px */
+  font-weight: 800;
+  font-family: 'Inter', sans-serif;
+}

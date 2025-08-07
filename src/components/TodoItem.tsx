@@ -30,7 +30,7 @@ const TodoItem: React.FC<Props> = ({ todo, onToggle, onDelete }) => {
             }`}
           />
           <p
-            className="m-0 p-0"
+            className="m-0 p-0 text-gray-700 text-base"
             style={{
               textDecoration: todo.completed ? "line-through" : "none",
               color: todo.completed ? "#6c757d" : "inherit",
@@ -39,14 +39,14 @@ const TodoItem: React.FC<Props> = ({ todo, onToggle, onDelete }) => {
             {todo.text}
           </p>
           {todo.completed && (
-            <span className="badge  rounded-pill bg-success px-3 py-2">
+            <span className="badge rounded-pill bg-success px-3 py-2">
               Concluída
             </span>
           )}
         </div>
       </td>
-      <td className="border-0">{formatDate(todo.createdAt)}</td>
-      <td className="border-0">{formatDate(todo.completedAt)}</td>
+      <td className="border-0 text-gray-700 text-base">{formatDate(todo.createdAt)}</td>
+      <td className="border-0 text-gray-700 text-base">{formatDate(todo.completedAt)}</td>
       <td colSpan={2} className="border-0 p-0">
         <Button
           variant="soft"
@@ -56,7 +56,7 @@ const TodoItem: React.FC<Props> = ({ todo, onToggle, onDelete }) => {
             onDelete(todo.id);
           }}
           aria-label="Excluir tarefa"
-          className="px-3 my-2 mx-2"
+          className="px-3 my-2 mx-2 "
           style={{
             paddingTop: "12px",
             paddingBottom: "12px",
