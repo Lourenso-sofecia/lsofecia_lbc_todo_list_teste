@@ -25,6 +25,7 @@ Um aplicativo de lista de tarefas desenvolvido com foco em **componentização**
 - ✅ Armazenamento local com `localStorage` para garantir persistência
 - ✅ Paginação com seleção de tamanho por página (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 20, 24, 25, 30, 50, 100)
 - ✅ Acessibilidade: suporte a leitores de tela e navegação via teclado
+- ✅ Skeleton: Logica de Loading pra dar a impressão que os dados da tabela estão sendo carregados no backEnd 
 ---
 
 
@@ -33,7 +34,7 @@ Um aplicativo de lista de tarefas desenvolvido com foco em **componentização**
 - [React 18+](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Bootstrap 5](https://getbootstrap.com/)
-- [Vite](https://vitejs.dev/) ou [Create React App](https://create-react-app.dev/) (dependendo da versão inicial usada)
+- [Create React App](https://create-react-app.dev/) 
 - `localStorage` para persistência de tarefas e histórico
 
 ---

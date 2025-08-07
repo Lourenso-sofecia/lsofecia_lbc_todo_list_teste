@@ -126,7 +126,7 @@ code {
   font-size: 14px;
   font-weight: 400;
   padding: 12px 16px;
-  background-color: #198754 !important; /* Verde */
+  background-color: #198754 !important; 
   color: white;
   width: 300px;
   display: flex;
@@ -161,7 +161,7 @@ code {
 }
 
 .custom-pagination .page-item.active .page-link {
-  background-color:#067B95 !important; /* Cor vermelha */
+  background-color:#067B95 !important; 
   border-color:#067B95 !important;
   color: #fff !important;
   font-weight: 500;
@@ -203,4 +203,44 @@ code {
 .custom-pagination-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+/* Skeleton.css */
+
+.skeleton-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  background-color: #f1f3f5;
+  margin-bottom: 8px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeleton-checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #dee2e6;
+}
+
+.skeleton-text {
+  flex: 1;
+  height: 16px;
+  border-radius: 4px;
+  background-color: #dee2e6;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #e9ecef;
+  }
+  50% {
+    background-color: #f8f9fa;
+  }
+  100% {
+    background-color: #e9ecef;
+  }
 }

@@ -5,6 +5,7 @@ import PageSizeSelector from "./PageSizeSelector";
 import PaginationControl from "./PaginationControl";
 import { Todo } from "../types/Todo";
 import { LOCAL_STORAGE_KEY, PAGE_SIZES } from "../constants/pagination";
+import TodoSkeleton from "./Skeleton";
 
 const TodoApp: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>(() => {
@@ -20,6 +21,7 @@ const TodoApp: React.FC = () => {
   });
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(PAGE_SIZES[7]);
+  const [loading, setLoading] = useState(true);
 
   const totalPages = Math.ceil(todos.length / pageSize);
 
@@ -67,6 +69,11 @@ const TodoApp: React.FC = () => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
   }, [todos]);
 
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <main
       className=" container d-flex flex-column align-items-start justify-content-start w-100 gap-3 p-3 "
@@ -86,7 +93,7 @@ const TodoApp: React.FC = () => {
 
       <section
         className="d-flex flex-column flex-lg-row  align-items-start align-items-lg-center justify-content-lg-between w-100 gap-lg-5 gap-3"
-        style={{ }}
+        style={{}}
       >
         <article className="w-100 w-md-auto">
           <p className="m-0 text-secondary"> Descrição da tarefa:</p>
@@ -113,11 +120,15 @@ const TodoApp: React.FC = () => {
 
       <section className="d-flex flex-column w-100 h-100">
         <div className="flex-grow-1 overflow-auto">
-          <TodoList
-            todos={paginatedTodos}
-            onToggle={handleToggle}
-            onDelete={handleDelete}
-          />
+          {loading ? (
+            <TodoSkeleton count={pageSize} />
+          ) : (
+            <TodoList
+              todos={paginatedTodos}
+              onToggle={handleToggle}
+              onDelete={handleDelete}
+            />
+          )}
         </div>
       </section>
 
